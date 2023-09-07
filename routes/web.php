@@ -16,7 +16,7 @@ use App\Http\Controllers\PerpustakaanController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('dashboard');
 
 Route::get('/perpustakaan/anggota', [PerpustakaanController::class, 'anggota'])->name('get_anggota');
 
