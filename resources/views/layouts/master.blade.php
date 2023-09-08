@@ -36,6 +36,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- Main Footer -->
         @include('separate.footer')
+
     </div>
     <!-- ./wrapper -->
 

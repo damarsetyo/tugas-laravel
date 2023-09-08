@@ -33,6 +33,12 @@ class PerpustakaanController extends Controller
         return view('perpustakaan.petugas');
     }
 
+    public function table()
+    {
+        //
+        return view('table');
+    }
+
     /**
      * Show the form for creating a new resource.
      */
