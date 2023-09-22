@@ -51,7 +51,7 @@
                                     <th>jurusan</th>
                                     <th>telepon</th>
                                     <th>alamat</th>
-                                    <th>Actiom</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -66,12 +66,18 @@
                                     <td>{{ $value->tlp }}</td>
                                     <td>{{ $value->alamat }}</td>
                                     <td>
-                                        <a href="" class="btn-sm btn-info">Show</a>
-                                        <a href="" class="btn-sm btn-warning">Edit</a>
-                                        <a href="" class="btn-sm btn-danger">Delete</a>
+                                       <form action="{{ route('anggota.destroy', $value->id) }}" method="post">
+                                        @csrf
+                                        @method('DELETE') 
+                                        <a href="{{ route('anggota.show', $value->id) }}" class="btn-sm btn-info">Show</a>
+                                        <a href="{{ route('anggota.edit', $value->id) }}" class="btn-sm btn-warning">Edit</a>
+                                        <button type="submit" class="btn-sm btn-danger">Delete</button>
+                                       </form>
                                     </td>
                                 </tr>
+                                
 
+                
                                 @empty
                                 <tr>
                                     <td>Data Masih Kosong</td>

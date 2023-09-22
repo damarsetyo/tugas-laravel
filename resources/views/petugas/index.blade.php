@@ -49,7 +49,7 @@
                                     <th>Jabatan</th>
                                     <th>Telepon petugas</th>
                                     <th>Alamat petugas</th>
-                                    <th>Actiom</th>
+                                    <th>Action</th>
 
                                 </tr>
                             </thead>
@@ -64,9 +64,13 @@
                                     <td>{{ $value->alamat_petugas }}</td>
 
                                     <td>
-                                        <a href="" class="btn-sm btn-info">Show</a>
-                                        <a href="" class="btn-sm btn-warning">Edit</a>
-                                        <a href="" class="btn-sm btn-danger">Delete</a>
+                                    <form action="{{ route('petugas.destroy', $value->id) }}" method="post">
+                                        @csrf
+                                        @method('DELETE') 
+                                        <a href="{{ route('petugas.show', $value->id) }}" class="btn-sm btn-info">Show</a>
+                                        <a href="{{ route('petugas.edit', $value->id) }}" class="btn-sm btn-warning">Edit</a>
+                                        <button type="submit" class="btn-sm btn-danger">Delete</button>
+                                    </form>
                                     </td>
                                 </tr>
 

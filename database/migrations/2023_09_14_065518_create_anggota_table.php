@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('jk');
             $table->string('jurusan');
             $table->string('tlp');
-            $table->string('alamat', 100);
+            $table->string('alamat');
             $table->timestamps();
         });
     }
